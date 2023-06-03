@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	counter := 1
+	helper.PrintBreak("For Loops")
 	for counter <= 10 {
 		fmt.Println("Loops = ", counter)
 		counter++
@@ -17,6 +21,7 @@ func main() {
 		- Post Statement, yaitu statement yang akan selalu diekseskusi diakhir tiap perulangan
 	*/
 
+	helper.PrintBreak("For Loops with statement")
 	for counter2 := 1; counter2 <= 10; counter2++ {
 		fmt.Println("Loops for with statement = ", counter2)
 	}
@@ -25,20 +30,23 @@ func main() {
 		For bisa digunakan untuk meng
 	*/
 
-	fmt.Println("==================Array==================")
+	helper.PrintBreak("Array")
 	arrayName := [...]string{"Rio", "Stefanus", "Antonius", "Jozef"}
+
+	helper.PrintBreak("Array for loop")
 	for i := 0; i < len(arrayName); i++ {
 		fmt.Println(arrayName[i])
 	}
 
-	fmt.Println("==================Slice==================")
+	helper.PrintBreak("Slice")
 	slice := []string{"Rio", "Stefanus", "Antonius", "Jozef"}
 
+	helper.PrintBreak("Slice for loops")
 	for i := 0; i < len(slice); i++ {
 		fmt.Println(slice[i])
 	}
 
-	fmt.Println("==================Map with for range==================")
+	helper.PrintBreak("Map")
 	mapPerson := map[string]string{
 		"name":    "rio",
 		"address": "Tebet",
@@ -46,7 +54,7 @@ func main() {
 	fmt.Println(mapPerson)
 
 	/// For Range
-
+	helper.PrintBreak("Map with for range")
 	for key, value := range mapPerson {
 		fmt.Println("key =", key, ",value = ", value)
 	}
@@ -65,17 +73,17 @@ func main() {
 		for value := range mapPerson { -> disini tetap akan me-return key
 
 	*/
-
+	helper.PrintBreak("Map with for range ignore value")
 	for key := range mapPerson { //cara baru
 		fmt.Println(mapPerson[key])
 	}
 
-	fmt.Println("==================Slice with for range==================")
-
+	helper.PrintBreak("Slice with for range")
 	for i, val := range slice {
 		fmt.Println("Index ", i, "=", val)
 	}
 
+	helper.PrintBreak("Slice with for range ignore index / key")
 	for _, val := range slice {
 		fmt.Println(val)
 	}

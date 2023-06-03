@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	username := "Admin"
 
+	helper.PrintBreak("Switch Case")
 	switch username {
 	case "Admin":
 		fmt.Println("Welcome admin")
@@ -18,7 +22,7 @@ func main() {
 		}
 
 	}
-
+	helper.PrintBreak("Switch Short Statement")
 	//Switch dengan Short Statement
 
 	switch length := len(username); length > 5 {
@@ -34,6 +38,7 @@ func main() {
 		Switch without Expression
 		Jadi Expressionnya di case nya
 	*/
+	helper.PrintBreak("Switch without Expression")
 
 	lengthNew := len(username)
 	switch {

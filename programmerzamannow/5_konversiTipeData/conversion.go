@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	var num32 int32 = 100000
@@ -11,7 +14,7 @@ func main() {
 	fmt.Println("num64 = ", num64)
 	fmt.Println("num8 = ", num8)
 
-	fmt.Println("================== ")
+	helper.PrintBreak("")
 
 	var num32_2 int32 = 128
 	var num64_2 int64 = int64(num32_2)
@@ -21,7 +24,7 @@ func main() {
 	fmt.Println("num64_2 = ", num64_2)
 	fmt.Println("num8_2 = ", num8_2)
 
-	fmt.Println("================== ")
+	helper.PrintBreak("")
 
 	var num32_3 int32 = 129
 	var num64_3 int64 = int64(num32_3)
@@ -31,7 +34,7 @@ func main() {
 	fmt.Println("num64_3 = ", num64_3)
 	fmt.Println("num8_3 = ", num8_3)
 
-	fmt.Println("================== ")
+	helper.PrintBreak("")
 
 	var name string = "Rio"
 	var e byte = name[0]

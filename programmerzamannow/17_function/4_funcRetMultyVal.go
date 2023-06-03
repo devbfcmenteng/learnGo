@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func getFullName() (string, string, string) { //Video 23
 	return "Rio", "Stefanus", "Jozef"
@@ -37,8 +40,7 @@ func main() {
 		_, _, _ := getFullName()
 
 	*/
-
-	fmt.Println("===============Named Return Values===============")
+	helper.PrintBreak("Named Return Value")
 	firstName_1, middleName_1, lastName_1 := getFullName2()
 	fmt.Println(firstName_1, middleName_1, lastName_1)
 }

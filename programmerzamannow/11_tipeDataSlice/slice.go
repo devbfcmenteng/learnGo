@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	var months = [...]string{
@@ -49,8 +52,7 @@ func main() {
 	fmt.Println("slice = ", slice1)
 	fmt.Println("Lenght slice =", len(slice1))
 	fmt.Println("Capacity slice =", cap(slice1))
-	fmt.Println("============================")
-	fmt.Println()
+	helper.PrintBreak("")
 
 	var slice2 = make([]string, 2, 2)
 	slice2[0] = "Rio"
@@ -59,7 +61,7 @@ func main() {
 	fmt.Println("Length slice2 =", len(slice2))
 	fmt.Println("Cap slice2 =", cap(slice2))
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 	slice2 = append(slice2, "Antonius")
 	fmt.Println(slice2)
 	fmt.Println("Length slice2 =", len(slice2))
@@ -70,7 +72,7 @@ func main() {
 		cth kapasitas max sebelumnya 2 maka kapasitas slice akan berubah menjadi (2 * n) ->  2 * 2 = 4
 	*/
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 	slice2 = append(slice2, "Jozef")
 	fmt.Println(slice2)
 	fmt.Println("Length slice2 =", len(slice2))
@@ -79,7 +81,7 @@ func main() {
 		disiini kapasitasn slice 4, dan value slice belum melebihi batas, jadi kapasitas belum berubah
 	*/
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 	slice2 = append(slice2, "Jozef2")
 	fmt.Println(slice2)
 	fmt.Println("Length slice2 =", len(slice2))
@@ -88,7 +90,7 @@ func main() {
 	/*
 		disini kapasitas sudah melewati batas max sebelumnya yaitu 4 maka kapasitas max slice berubah (2 * n) ->  2 * 4 = 8
 	*/
-	fmt.Println("=================================")
+	helper.PrintBreak("")
 
 	Days := [...]string{
 		"Senin",
@@ -106,7 +108,7 @@ func main() {
 	fmt.Println("len SliceDay =", len(SliceDay))
 	fmt.Println("Cap SliceDay =", cap(SliceDay))
 	fmt.Println(SliceDay)
-	fmt.Println("=================================")
+	helper.PrintBreak("")
 	SliceDay = append(SliceDay, "JumatTes")
 	SliceDay[0] = "RabuTes"
 	fmt.Println("len SliceDay after append =", len(SliceDay))
@@ -114,20 +116,21 @@ func main() {
 	fmt.Println("SliceDay after append =", SliceDay)
 	fmt.Println("Days after append = ", Days)
 
-	fmt.Println("=================================")
+	helper.PrintBreak("")
 	SliceDay2 := Days[5:]
 	fmt.Println("len SliceDay2 =", len(SliceDay2))
 	fmt.Println("Cap SliceDay2 =", cap(SliceDay2))
 	fmt.Println(Days)
 	fmt.Println(SliceDay2)
-	fmt.Println("=================================")
+	helper.PrintBreak("")
 	SliceDay2 = append(SliceDay2, "SeninNext")
 	SliceDay2[0] = "SabtuTest"
 	fmt.Println("len SliceDay2 after append =", len(SliceDay2))
 	fmt.Println("Cap SliceDay2 after append =", cap(SliceDay2))
 	fmt.Println("SliceDay2 after append =", SliceDay2)
 	fmt.Println("Days after append = ", Days)
-	fmt.Println("=================================")
+
+	helper.PrintBreak("Copy Slice")
 	newSlice := make([]string, len(SliceDay2), cap(SliceDay2))
 	copy(newSlice, SliceDay2)
 	fmt.Println("Copy Slice =", newSlice)

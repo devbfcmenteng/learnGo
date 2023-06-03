@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	person := map[string]string{
@@ -25,7 +28,7 @@ func main() {
 	delete(person, "address")
 	fmt.Println(person)
 
-	fmt.Println("=================")
+	helper.PrintBreak("")
 
 	var book map[string]string = make(map[string]string)
 	fmt.Println(book)

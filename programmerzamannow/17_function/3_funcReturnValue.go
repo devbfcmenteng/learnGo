@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func getHello(firstName string, lastName string, age string) string {
 	return "Hello " + firstName + " " + lastName + ", age = " + age
@@ -23,7 +26,7 @@ func main() {
 	age := "17"
 	fmt.Println(getHello(firstname, lastname, age))
 
-	fmt.Println("=================================")
+	helper.PrintBreak("")
 	res2 := getHello2("Rio")
 	fmt.Println(res2)
 	fmt.Println(getHello2("Admin"))

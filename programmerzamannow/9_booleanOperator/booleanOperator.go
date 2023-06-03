@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	//Boolean Operator Perbandingan
@@ -29,7 +32,7 @@ func main() {
 	fmt.Println("val1 && val2", val1 && val2)
 	fmt.Println("val1 || val2", val1 || val2)
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 
 	val2 = false
 	fmt.Println("val1 =", val1)
@@ -37,7 +40,7 @@ func main() {
 	fmt.Println("val1 && val2", val1 && val2)
 	fmt.Println("val1 || val2", val1 || val2)
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 
 	val1 = false
 	val2 = true
@@ -46,7 +49,7 @@ func main() {
 	fmt.Println("val1 && val2", val1 && val2)
 	fmt.Println("val1 || val2", val1 || val2)
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 
 	val2 = false
 	fmt.Println("val1 =", val1)
@@ -54,7 +57,7 @@ func main() {
 	fmt.Println("val1 && val2", val1 && val2)
 	fmt.Println("val1 || val2", val1 || val2)
 
-	fmt.Println("============================")
+	helper.PrintBreak("")
 
 	val1 = true
 	fmt.Println("val1 =", val1)

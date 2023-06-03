@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"bfcTest/packages/helper"
+	"fmt"
+)
 
 func main() {
 	// + -> Tambah
@@ -16,8 +19,7 @@ func main() {
 	fmt.Println(plus)
 	fmt.Println(mul)
 
-	fmt.Println("==============")
-	fmt.Println("Augmented Assignment")
+	helper.PrintBreak("Augmented Assignment")
 
 	//Augmented Assignments
 	// a = a + 10 -> a += 10
@@ -45,8 +47,7 @@ func main() {
 	a_aug %= 2
 	fmt.Println("Mod 2 Augmented = ", a_aug)
 
-	fmt.Println("==============")
-	fmt.Println("Unary Operator")
+	helper.PrintBreak("Unary Operator")
 
 	//Unary Operator
 	// i++ -> i = i + 1
