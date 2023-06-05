@@ -35,4 +35,17 @@ func main() {
 	var book2 = map[string]string{}
 	fmt.Println(book2)
 
+	test := map[string]int{
+		"bil1": 12,
+		"bil2": 18,
+	}
+
+	fmt.Println(test)
+	fmt.Println(test["bil1"])
+	test2 := map[int]string{
+		1: "Rio",
+		2: "Jozef",
+	}
+	fmt.Println(test2)
+	fmt.Println(test2[1])
 }
